@@ -3,7 +3,7 @@
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myblog2',      #数据库里的database名称
+        'NAME': 'djangohotel',      #数据库里的database名称
         'USER': 'root',         #进入数据库的用户名
         'PASSWORD': '100200',   #密码
         'HOST': '127.0.0.1',
