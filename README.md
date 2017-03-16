@@ -1,11 +1,11 @@
-hotelbooksystem
+# hotelbooksystem
 ----------------------
 
 基于Django的python信息管理系统，用于酒店预订管理
 
 <br />
 
- # Base on
+# Base on
 
 Python: 2.7.12
 Django:1.10
