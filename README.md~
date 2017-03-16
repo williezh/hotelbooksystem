@@ -1,5 +1,9 @@
 hotelbooksystem
+<<<<<<< HEAD
+-----
+=======
 -----------------
+>>>>>>> 02ae3129ab571a68907b15136ae487abedd78c3e
 
 基于Django的python信息管理系统，用于酒店预订管理
 
