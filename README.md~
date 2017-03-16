@@ -1,5 +1,5 @@
 hotelbooksystem
-------
+==================
 
 基于Django的python信息管理系统，用于酒店预订管理
 
@@ -10,18 +10,18 @@ Python: 2.7.12
 Django:1.10
 
 MySQL:5.1.73
-==================
 
+------
 
 
 #Usage:
 1. 克隆项目：
 ```
-git clone git@github.com:williezh/hotelbooksystem
+git clone git@github.com:williezh/kcsj
 ```
 2. 进入文件夹：
 ```
-cd hotelbooksystem
+cd kcsj
 ```
 3. 建立虚拟环境：
 ```
