@@ -1,4 +1,4 @@
-*hotelbooksystem*
+hotelbooksystem
 ----------------------
 
 基于Django的python信息管理系统，用于酒店预订管理
