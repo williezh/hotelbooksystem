@@ -1,18 +1,17 @@
-hotelbooksystem
------
+# hotelbooksystem
+----------------------
 
 基于Django的python信息管理系统，用于酒店预订管理
+<br />
 
-#环境
-
+ # Base on
+-----
 Python: 2.7.12
-
 Django:1.10
-
 MySQL:5.1.73
-==================
 
-#Usage:
+# How to Run:
+-----
 1. 克隆项目：
 ```
 git clone git@github.com:williezh/hotelbooksystem
@@ -51,6 +50,4 @@ python manage.py runserver
 ```
 10. 打开如下网址即可看到运行效果：
 
-[http://127.0.0.1:8000/]: http://127.0.0.1:8000/ "localhost"
-
-
+http://127.0.0.1:8000/ 
