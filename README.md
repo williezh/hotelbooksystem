@@ -8,7 +8,9 @@
 # Base on
 
 Python: 2.7.12
+
 Django:1.10
+
 MySQL:5.1.73
 
 # How to Run:
