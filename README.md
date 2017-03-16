@@ -10,7 +10,6 @@ Python: 2.7.12
 Django:1.10
 
 MySQL:5.1.73
-
 ==================
 
 #Usage:
@@ -51,7 +50,7 @@ source migrate.sh
 python manage.py runserver
 ```
 10. 打开如下网址即可看到运行效果：
-```
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-```
+
+[http://127.0.0.1:8000/]: http://127.0.0.1:8000/ "localhost"
+
 
