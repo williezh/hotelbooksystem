@@ -33,7 +33,7 @@ source venv/bin/activate
 ```
 5. 安装必需包（首次运行）：
 ```
-pip install -r requiredments.txt
+pip install -r requirements.txt
 ```
 6. 由local_settings_sample.py创建local_settings.py
 ```
