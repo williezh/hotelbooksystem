@@ -1,3 +1,4 @@
+#coding=utf-8
 """
 Django settings for kcsj project.
 
@@ -36,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DJangoHotel',
+    'qiniuyun',
+    
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,8 +81,13 @@ DATABASES = {
     }
 }
 if 1:
-    from .local_settings import email_conf,DATABASES as local_db
-    DATABASES = local_db 
+    from local_settings import email_conf,qiniu_conf,DATABASES as local_db
+    DATABASES = local_db    
+    
+# qiniu settigs for upload used by 'qiniuyun.QiniuPush'
+# https://github.com/qiniu/python-sdk
+    
+    QINIU_CONF=qiniu_conf
 #  ---------------------------------------------------------    
 #  Email ,ref:http://www.cnblogs.com/BeginMan/p/3443158.html
     EMAIL_BACKEND = email_conf["EMAIL_BACKEND"]
