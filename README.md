@@ -13,7 +13,7 @@ Django:1.10
 
 MySQL:5.1.73
 
-# How to Run:
+# Run at local:
 
 1. 克隆项目：
 ```
@@ -51,15 +51,20 @@ source migrate.sh
 ```
 python manage.py createsuperuser
 ```
-9. 登录管理员，然后再进入上传页面：
-```
+10. 登录管理员，然后再进入上传页面：
+
 http://127.0.0.1:8000/admin
+
 http://127.0.0.1:8000/upload
-```
-9. 运行服务：
+
+11. 上传图片到七牛云存储（七牛上需有local_settings.py中对应的私有空间）：
+- 把 static/pic 中的图片一个个上传到
+- Name输入框需留空
+
+12. 运行服务：
 ```
 python manage.py runserver
 ```
-10. 打开如下网址即可看到运行效果：
+13. 打开如下网址即可看到运行效果：
 
 http://127.0.0.1:8000/ 
