@@ -22,9 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'if4s&rsp65^oe*o!%%e*(%x9*pxazr0&bae%+&50a*cer$a(xa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
+ALLOWED_HOSTS = ['williezheng.pythonanywhere.com']
 
 
 # Application definition
@@ -112,7 +111,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+#    os.path.join(BASE_DIR, "static"),
 
 )
