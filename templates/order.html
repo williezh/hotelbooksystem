@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}预定客房{% endblock %}
+{% block title %}预订客房{% endblock %}
 {% block wraptype %}
     <div class="wrap order about">
 {% endblock %}
@@ -10,7 +10,7 @@
                 <ul>
                     <li>
                         {% load staticfiles %}
-                        <img src="{%  static "pic/6240454_091935658000_2.jpg" %}" >
+                        <img src="{%  static "pic/background_order.jpg" %}" >
                     </li>
                 </ul>
 
@@ -20,7 +20,7 @@
                         <form action="/orderresult" method="get">
                             <input type="text" name="name" placeholder="请输入你的名字">
                             <input type="text" name="tel" placeholder="请输入你的电话号码">
-                            <input type="text" name="cardid" placeholder="请输入你的身份证号">
+                            <input type="text" name="IDcard" placeholder="请输入你的身份证号">
                               房型： <select name="roomtype">
                                 <option value="standard">标准间</option>
                                 <option value="better">豪华间</option>

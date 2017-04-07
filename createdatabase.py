@@ -1,6 +1,6 @@
 #coding:utf-8
 import pymysql
-
+import re
 from importlib import import_module
 #search the dirname of local_settings.py and import it
 with open('manage.py') as f:
@@ -20,7 +20,7 @@ database=dbconf.get('NAME')
 try:
     conn=pymysql.connect(**config)
     cur=conn.cursor()
-    
+#    cur.execute('drop database {}'.format(database))    
     cur.execute('create database if not exists {}'.format(database))
     #conn.select_db(database)
     conn.commit()    

@@ -1,7 +1,8 @@
 
 {% if request.user.is_authenticated %}
     <h1>Upload to qiniu cloud:</h1>
-    <img src="{{ uf.img }}" width="180px" height="180px" alt="头像" />
+    <p>点击'Choose File'选择图片，然后点'上传'将文件上传至七牛云的存储空间</p>
+    <p>(Name为上传后文件在七牛云里的名称，留空则采用原文件名)</p></br>
     <form method="post" enctype="multipart/form-data" action="{% url 'upload' %}">
         {% csrf_token %}
         {{ uf.as_p }}

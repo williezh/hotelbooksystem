@@ -25,7 +25,7 @@ cd hotelbooksystem
 ```
 3. 建立虚拟环境：
 ```
-virtualenv --python=python2 venv
+virtualenv --python=python2.7 venv
 ```
 4. 激活虚拟环境：
 ```
@@ -39,13 +39,22 @@ pip install -r requirements.txt
 ```
 cp kcsj/local_settings_sample.py kcsj/local_settings.py
 ```
-7. 修改其中的数据库配置（'USER','PASSWORD')
+7. 修改其中的配置（数据库、邮箱和七牛云)
 ```
 vi kcsj/local_settings.py
 ```
 8. 初始化数据库（首次运行）：
 ```
 source migrate.sh
+```
+9. 创建管理员账户：
+```
+python manage.py createsuperuser
+```
+9. 登录管理员，然后再进入上传页面：
+```
+http://127.0.0.1:8000/admin
+http://127.0.0.1:8000/upload
 ```
 9. 运行服务：
 ```

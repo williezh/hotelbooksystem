@@ -11,10 +11,10 @@ class RoomInfoAdmin(admin.ModelAdmin):
     list_display = ('name', 'price','total', 'description')
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('id','name','tel','cardid','roomtype','begin','end','totalprice','state')
+    list_display = ('id','customer','roomtype','begin','end','totalprice','state')
 
 class customerAdmin(admin.ModelAdmin):
-    list_display = ('tel','name','cardid')
+    list_display = ('tel','name','IDcard')
 
 admin.site.register(Hotel,HotelAdmin)
 admin.site.register(Customer,customerAdmin)
