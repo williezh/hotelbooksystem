@@ -23,9 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'if4s&rsp65^oe*o!%%e*(%x9*pxazr0&bae%+&50a*cer$a(xa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-if 'VIRTUALENVWRAPPER_PROJECT_FILENAME' in os.environ:
-    DEBUG = False
+DEBUG = True and 'VIRTUALENVWRAPPER_PROJECT_FILENAME' not in os.environ
     
 ALLOWED_HOSTS = [
         "localhost",'127.0.0.1',
