@@ -7,17 +7,17 @@
 
 # Base on
 
-Python: 2.7.12
+Python: 2.7/3.6
 
-Django:1.10
+Django:1.10.6
 
-MySQL:5.1.73
+MySQL
 
 # Run at local:
 
 1. 克隆项目：
 ```
-git clone git@github.com:williezh/hotelbooksystem
+git clone https://github.com/williezh/hotelbooksystem
 ```
 2. 进入文件夹：
 ```

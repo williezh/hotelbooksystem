@@ -76,23 +76,23 @@ def main():
     ba.main()
     '''
     for i,f in enumerate(QiniuPush.ls_files(),1):
-        print i,'、',f
+        print(i,'、',f)
     filePath='/home/willie/Downloads/PG.jpg'
     url=QiniuPush.put_file(filePath) 
     sleep(1)
     with open(filePath,'rb') as f:
         url2=QiniuPush.put_data(filePath,f.read())
         #or: url2=QiniuPush.put_data(filePath.split('/')[-1],f.read())
-    print url,'\n',QiniuPush.private_download_url(url2,expires=7200)   
+    print(url,'\n',QiniuPush.private_download_url(url2,expires=7200))
     sleep(3)    
     assert QiniuPush.exists(url)
     for i,f in enumerate(QiniuPush.ls_files(),1):
-        print i,'、',f
-    print QiniuPush.delete(url)    
+        print(i,'、',f)
+    print(QiniuPush.delete(url))
     assert QiniuPush.exists(url)==False
     assert QiniuPush.delete(url)=='{} not exist in qiniu_cloud'.format(url)
     for i,f in enumerate(QiniuPush.ls_files(),1):
-        print i,'、',f
+        print(i,'、',f)
  
 if __name__=='__main__':
     main()    

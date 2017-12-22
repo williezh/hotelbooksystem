@@ -39,9 +39,10 @@ try:
         cur.execute(i)
         
     conn.commit()
+    print('success to insert data')
     cur.close()
     conn.close()
-except Exception,e:
-     print "SQL Error: {}".format(e)
+except Exception as e:
+    import traceback;traceback.print_exc()
 
     

@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from qiniuyun.backend import QiniuPush
 from qiniuyun.models import ImageAtQiniu
-from indexView import ImgList
+from .indexView import ImgList
 from DJangoHotel.models import Order
 
 def order(request):

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'if4s&rsp65^oe*o!%%e*(%x9*pxazr0&bae%+&50a*cer$a(xa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True and 'VIRTUALENVWRAPPER_PROJECT_FILENAME' not in os.environ
+DEBUG = True and 'romanload' in BASE_DIR
     
 ALLOWED_HOSTS = [
         "localhost",'127.0.0.1',
@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 
 # Application definition
 
-INSTALLED_APPS = (
+INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'DJangoHotel',
     'qiniuyun',
     
-)
+]
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -84,9 +84,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-if 1:
-    from local_settings import email_conf,qiniu_conf,DATABASES as local_db
-    DATABASES = local_db    
+if not DEBUG:
+    from .local_settings import email_conf, qiniu_conf, DATABASES
     
 # qiniu settigs for upload used by 'qiniuyun.QiniuPush'
 # https://github.com/qiniu/python-sdk
@@ -94,14 +93,7 @@ if 1:
     QINIU_CONF=qiniu_conf
 #  ---------------------------------------------------------    
 #  Email ,ref:http://www.cnblogs.com/BeginMan/p/3443158.html
-    EMAIL_BACKEND = email_conf["EMAIL_BACKEND"]
- 
-    EMAIL_USE_TLS = email_conf["EMAIL_USE_TLS"]
-    EMAIL_HOST = email_conf["EMAIL_HOST"]
-    EMAIL_PORT = email_conf["EMAIL_PORT"]
-    EMAIL_HOST_USER = email_conf["EMAIL_HOST_USER"]
-    EMAIL_HOST_PASSWORD = email_conf["EMAIL_HOST_PASSWORD"]
-    DEFAULT_FROM_EMAIL = email_conf["DEFAULT_FROM_EMAIL"]
+    globals().update(email_conf)
 #  ---------------------------------------------------------
 
 # Internationalization
@@ -125,7 +117,3 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-
-)

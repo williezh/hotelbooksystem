@@ -88,5 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
-#linux file modify backup
+# linux file modify backup
 *~
+
+# local db
+db.sqlite3

@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from qiniuyun.backend import QiniuPush
 from qiniuyun.models import ImageAtQiniu
-from indexView import ImgList
+from .indexView import ImgList
 from DJangoHotel.models import Order,RoomInfo,Customer
 import time
 import datetime
