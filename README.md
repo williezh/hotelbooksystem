@@ -3,7 +3,9 @@
 
 基于Django的python信息管理系统，用于酒店预订管理
 
-<br />
+
+
+PS：该账户已基本不再使用，最新版基于Django2.0+的，放到了这里：https://github.com/waketzheng/hotelbooksystem
 
 # Base on
 
